@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Новини</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li class="nav-menu-item">
+                    <a href="index.html">Начало</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="facts.html">Факти</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="news.html">Новини</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="contact.html">Свържете се</a>
+                </li>
+                <li class="nav-menu-item burger-menu" onclick="showAside();">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </li>
+            </ul>
+        </nav>
+        <aside id="aside" class="aside-menu">
+            <div style="display: flex; align-items: center; justify-content: flex-end">
+                <span id="close-button" onclick="hideAside();" class="material-symbols-outlined">
+                    close
+                </span>
+            </div>
+            <ul style="flex-direction: column; box-shadow: none;" class="nav-menu">
+                <li class="nav-menu-item aside">
+                    <a href="index.html">Начало</a>
+                </li>
+                <li class="nav-menu-item aside">
+                    <a href="facts.html">Факти</a>
+                </li>
+                <li class="nav-menu-item aside">
+                    <a href="news.html">Новини</a>
+                </li>
+                <li class="nav-menu-item aside">
+                    <a href="contact.html">Свържете се</a>
+                </li>
+            </ul>
+        </aside>
+    </header>
+    <main>
+
+        <div class="container">
+            <h1>Новини</h1>
+            <a class="news-ref" href="https://sportal.bg/news-2023060911575420141" target="_blank">
+                <article class="news-container">
+                    <div class="news-image">
+                        <img src="https://sportal365images.com/process/smp-images-production/sportal.bg/09062023/4037fb60-8006-445f-8858-65884ea92f00.jpeg?operations=crop(0:443:3000:2131),fit(968:545)&format=webp" />
+                    </div>
+                    <div class="news-description">
+                        <h2>
+                            Валентино Роси спечели
+                            второто състезание от
+                            "Пътя към Льо Ман"
+                        </h2>
+                        <div>
+                            <p>
+                                Деветкратният световен шампион по мотоциклетизъм на писта Валентино Роси спечели второто състезание от сериите „Пътя към Льо Ман“, което се проведе на пистата „Сарт“ край Льо Ман по-рано днес.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <a class="news-ref" href="https://gong.bg/motorni/motori/markes-vze-sprintovoto-systezanie-v-malajziia-762644" target="_blank">
+                <article class="news-container">
+                    <div class="news-image">
+                        <img src="https://www.roadracingworld.com/wp-content/uploads/2022/09/Marc-Marquez-93.-Photo-coourtesy-Repsol-Honda._1662577038-e1663084501794.jpg" />
+                    </div>
+                    <div class="news-description">
+                        <h2>
+                            Маркес взе спринтовото
+                            състезание в Малайзия
+                        </h2>
+                        <div>
+                            <p>
+                                Aлекс Маркес (Испания, Repsol
+                                Honda Team) спечели спринтовото
+                                състезание в Гран при на Малайзия
+                                отклас MotoGP на световния
+                                шампионат по мотоциклетизъм
+                                на писта.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <a class="news-ref" href="https://gong.bg/motorni/motori/peko-banaia-nad-vsichki-v-niderlandiia-741405" target="_blank">
+                <article class="news-container">
+                    <div class="news-image">
+                        <img src="https://m.thepeninsulaqatar.com/get/maximage/20221106_1667745939-344.jpeg?1667745939" />
+                    </div>
+                    <div class="news-description">
+                        <h2>
+                            Пеко Баная над всички
+                            в Нидерландия
+                        </h2>
+                        <div>
+                            <p>
+                                Италианецът Франческо Баная с
+                                Дукати спечели Гран при на
+                                Нидерландия в Асен на Moto GP.
+                                Баная постигна в Нидерландия
+                                четвърта победа за сезона
+                                след тези в Португалия,
+                                Испания и Италия.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <a class="news-ref" href="https://gong.bg/motorni/motori/moto-gp-se-zavryshta-v-braziliia-821562" target="_blank">
+                <article class="news-container">
+                    <div class="news-image">
+                        <img src="https://m5.netinfo.bg/media/images/50956/50956927/960-600-sprintovo-systezanie-v-moto-gp-za-goliamata-nagrada-na-malajziia.jpg" />
+                    </div>
+                    <div class="news-description">
+                        <h2>
+                            Moto GP се завръща в Бразилия
+                        </h2>
+                        <div>
+                            <p>
+                                MotoGP ще се завърне в Бразилия през 2026 година, след като сключи петгодишен договор с пистата "Айртон Сена" в Гояния, съобщиха организаторите.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <a class="news-ref" href="https://gong.bg/motorni/motori/pochina-motocikletistyt-kojto-katastrofira-na-rali-maroko-812516" target="_blank">
+                <article class="news-container">
+                    <div class="news-image">
+                        <img src="https://m.netinfo.bg/media/images/35039/35039890/960-600-sveshti-svesht-goriashta-goriashti.jpg" />
+                    </div>
+                    <div class="news-description">
+                        <h2>
+                            Почина мотоциклетистът, който катастрофира на Рали Мароко
+                        </h2>
+                        <div>
+                            <p>
+                                Френският мотоциклетист Фредерик Бодри, който катастрофира по време на Рали Мароко близо до град Загора в източната част на страната, е починал снощи в болницата, съобщава агенция Ройтерс.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <a class="news-ref" href="https://gong.bg/motorni/motori/gran-pri-na-indiia-v-moto-gp-shte-se-zavyrne-prez-2026-a-811069" target="_blank">
+                <article class="news-container">
+                    <div class="news-image">
+                        <img src="https://m3.netinfo.bg/media/images/50928/50928468/960-600-gran-pri-na-indiia-v-moto-gp.jpg" />
+                    </div>
+                    <div class="news-description">
+                        <h2>
+                            Гран при на Индия в Moto GP ще се завърне през 2026-а
+                        </h2>
+                        <div>
+                            <p>
+                                Състезанието за Голямата награда на Индия ще се върне в календара на световния шампионат по мотоциклетизъм на писта в клас MotoGP едва през 2026 година, съобщиха организаторите, по-малко от два месеца след като обявиха, че надпреварата ще се проведе на пистата "Буда Интернешънъл" през следващите три сезона.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <a class="news-ref" href="https://gong.bg/motorni/motori/multimedia/video/hamiltyn-kupuva-otbor-ot-motogp-798614" target="_blank">
+                <article class="news-container">
+                    <div class="news-image">
+                        <img src="https://m5.netinfo.bg/media/images/50793/50793743/369-229-liuis-hamiltyn.jpg" />
+                    </div>
+                    <div class="news-description">
+                        <h2>
+                            Хамилтън купува отбор от MotoGP?
+                        </h2>
+                        <div>
+                            <p>
+                                Седемкратният световен шампион във Формула 1 Люис Хамилтън иска да купи отбор от MotoGP. Става въпрос за тима на Грезини, твърди The Race. Според информацията, британският пилот на Мерцедес проявява сериозен интерес към тима от световния шампионат по мотоциклетизъм, собственост на Надя Падовани.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <a class="news-ref" href="https://gong.bg/motorni/motori/martin-choj-vleze-v-top-10-na-svetovniia-endurans-shampionat-795229" target="_blank">
+                <article class="news-container">
+                    <div class="news-image">
+                        <img src="https://m4.netinfo.bg/media/images/50839/50839866/960-600-martin-choj.jpg" />
+                    </div>
+                    <div class="news-description">
+                        <h2>
+                            Мартин Чой влезе в Топ 10 на Световния ендуранс шампионат
+                        </h2>
+                        <div>
+                            <p>
+                                Много добро представяне направи отборът на MAKO Racing (Ямаха) по време на 2-ия кръг от Световния ендуранс шампионат на пистата „Спа“ в Белгия. Тимът завърши на девето място в крайното класиране на EWC след направени 192 обиколки в рамките на осем часовото състезание.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <a class="news-ref" href="https://gong.bg/motorni/motori/naj-goliamoto-motosport-sybitie-u-nas-startira-na-8-iuni-794226" target="_blank">
+                <article class="news-container">
+                    <div class="news-image">
+                        <img src="https://m5.netinfo.bg/media/images/50833/50833997/960-600-24-chasa-na-bylgariia.jpg" />
+                    </div>
+                    <div class="news-description">
+                        <h2>
+                            Най-голямото мотоспорт събитие у нас стартира на 8 юни
+                        </h2>
+                        <div>
+                            <p>
+                                Сезонът в Европейския картинг шампионат по издръжливост ще бъде възобновен на 8 юни, когато стартира „24 часа на България“ –  единственото за годината 24-часово състезание у нас. Писта „Пауталия“ в Кюстендил отново ще бъде домакин на събитието, в което ще участват над 250 пилоти, разпределени в 46 отбора. Началото на надпреварата ще бъде дадено на 8 юни в 12:30 ч., като за всички почитатели входът е свободен.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <a class="news-ref" href="https://gong.bg/motorni/drugi/ispanskiiat-tijnejdzhyr-aldeger-shte-se-systezava-za-dukati-v-motogp-783020" target="_blank">
+                <article class="news-container">
+                    <div class="news-image">
+                        <img src="https://m.netinfo.bg/media/images/11926/11926990/960-600-po-podobie-na-valentino-rosi-i-kejsi-stounyr-princ-uiliam.jpg" />
+                    </div>
+                    <div class="news-description">
+                        <h2>
+                            Испанският тийнейджър Алдегер ще се състезава за Дукати в MotoGP
+                        </h2>
+                        <div>
+                            <p>
+                                Испанският тийнейджър Фермин Алдегер ще се състезава за тима на Дукати в световния шампионат по мотоциклетизъм в клас MotoGP от 2025 година с двугодишен договор с опция за още две години, съобщи Ройтерс.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <div style="text-align: right; color: gray; font-weight: bold;">
+                <sub>Източници: sportal.bg / gong.bg</sub>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <center><h2 style="width: 300px;">Бързи препратки</h2></center>
+        <div id="ref-container">
+            <div>
+                <a href="index.html" style="color: black; text-decoration: none;">
+                    <center>
+                        <span>
+                            Начало
+                        </span>
+                    </center>
+                </a>
+            </div>
+            <div>
+                <a href="facts.html" style="color: black; text-decoration: none;">
+                    <center>
+                        <span>
+                            Факти
+                        </span>
+                    </center>
+                </a>
+            </div>
+            <div>
+                <a href="news.html" style="color: black; text-decoration: none;">
+                    <center>
+                        <span>
+                            Новини
+                        </span>
+                    </center>
+                </a>
+            </div>
+            <div>
+                <a href="contact.html" style="color: black; text-decoration: none;">
+                    <center>
+                        <span>
+                            Връзка
+                        </span>
+                    </center>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function showAside() {
+            var aside = document.getElementById("aside");
+            aside.style = "display: block;"
+        }
+        function hideAside() {
+            var aside = document.getElementById("aside");
+            aside.style = "display: none;"
+        }
+    </script>
+</body>
+</html>

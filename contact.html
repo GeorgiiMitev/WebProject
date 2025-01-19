@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Връзка</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li class="nav-menu-item">
+                    <a href="index.html">Начало</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="facts.html">Факти</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="news.html">Новини</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="contact.html">Свържете се</a>
+                </li>
+                <li class="nav-menu-item burger-menu" onclick="showAside();">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </li>
+            </ul>
+        </nav>
+        <aside id="aside" class="aside-menu">
+            <div style="display: flex; align-items: center; justify-content: flex-end">
+                <span id="close-button" onclick="hideAside();" class="material-symbols-outlined">
+                    close
+                </span>
+            </div>
+            <ul style="flex-direction: column; box-shadow: none;" class="nav-menu">
+                <li class="nav-menu-item aside">
+                    <a href="index.html">Начало</a>
+                </li>
+                <li class="nav-menu-item aside">
+                    <a href="facts.html">Факти</a>
+                </li>
+                <li class="nav-menu-item aside">
+                    <a href="news.html">Новини</a>
+                </li>
+                <li class="nav-menu-item aside">
+                    <a href="contact.html">Свържете се</a>
+                </li>
+            </ul>
+        </aside>
+    </header>
+    <main>
+        <div class="container form-container">
+            <h1 style="text-align:center;">Свържете се с нас!</h1>
+            <div class="form">
+                <form action="#" method="post" onsubmit="return formValidation();">
+                    <input id="firstName" class="input" type="text" name="firstName" placeholder="Име" />
+
+                    <input id="lastName" class="input" type="text" name="lastName" placeholder="Фамилия"/>
+
+                    <input id="email" class="input" type="text" name="email" placeholder="Имейл"/>
+
+                    <textarea id="textarea" placeholder="Вашето съобщение..."></textarea>
+
+                    <center id="error" class="error">error</center>
+                    <div style="text-align: center;">
+                        <button type="submit">Изпращане</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <center><h2 style="width: 300px;">Бързи препратки</h2></center>
+        <div id="ref-container">
+            <div>
+                <a href="index.html" style="color: black; text-decoration: none;">
+                    <center>
+                        <span>
+                            Начало
+                        </span>
+                    </center>
+                </a>
+            </div>
+            <div>
+                <a href="facts.html" style="color: black; text-decoration: none;">
+                    <center>
+                        <span>
+                            Факти
+                        </span>
+                    </center>
+                </a>
+            </div>
+            <div>
+                <a href="news.html" style="color: black; text-decoration: none;">
+                    <center>
+                        <span>
+                            Новини
+                        </span>
+                    </center>
+                </a>
+            </div>
+            <div>
+                <a href="contact.html" style="color: black; text-decoration: none;">
+                    <center>
+                        <span>
+                            Връзка
+                        </span>
+                    </center>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function showAside() {
+            var aside = document.getElementById("aside");
+            aside.style = "display: block;"
+        }
+        function hideAside() {
+            var aside = document.getElementById("aside");
+            aside.style = "display: none;"
+        }
+        function formValidation() {
+            var error = document.getElementById("error");
+            var firstName = document.getElementById("firstName");
+            var lastName = document.getElementById("lastName");
+            var email = document.getElementById("email");
+            var textarea = document.getElementById("textarea");
+
+            if (firstName.value == "") {
+                error.innerHTML = "Моля въведи име!"
+                error.style = "display: block;"
+                return false;
+            }
+            if ((firstName.value.charAt(0) < 'А' || firstName.value.charAt(0) > 'Я') &&
+                (firstName.value.charAt(0) < 'A' || firstName.value.charAt(0) > 'Z')) {
+                error.innerHTML = "Името трябва да започва с главна буква!";
+                error.style = "display: block;";
+                return false;
+            }
+            if (firstName.value.length < 2) {
+                error.innerHTML = "Името трябва да е поне 2 символа!"
+                error.style = "display: block;"
+                return false;
+            }
+            if (lastName.value == "") {
+                error.innerHTML = "Моля въведи фамилия!"
+                error.style = "display: block;"
+                return false;
+            }
+            if ((lastName.value.charAt(0) < 'А' || lastName.value.charAt(0) > 'Я') &&
+                (lastName.value.charAt(0) < 'A' || lastName.value.charAt(0) > 'Z')) {
+                error.innerHTML = "Фамилията трябва да започва с главна буква!";
+                error.style = "display: block;";
+                return false;
+            }
+            if (lastName.value.length < 4) {
+                error.innerHTML = "Фамилията трябва да е поне 4 символа!"
+                error.style = "display: block;"   
+                return false;
+            }
+    
+            if (!email.value.includes('@') ||  !email.value.includes('.')) {
+                error.innerHTML = "Имейлът трябва да е валиден!";
+                error.style = "display: block;";
+                return false;
+            }
+            if (email.value.indexOf('.') < email.value.indexOf('@')) {
+                error.innerHTML = "Имейлът трябва да е валиден!";
+                error.style = "display: block;";
+                return false;
+            }
+            if (email.value.includes('..')) {
+                error.innerHTML = "Имейлът трябва да е валиден!";
+                error.style = "display: block;";
+                return false;
+            }
+            if (email.value.startsWith('@') || email.value.endsWith('@')) {
+                error.innerHTML = "Email адресът трябва да е валиден!";
+                error.style = "display: block;";
+                return false;
+            }
+            if (email.value.startsWith('.') || email.value.endsWith('.')) {
+                error.innerHTML = "Email адресът трябва да е валиден!";
+                error.style = "display: block;";
+                return false;
+            }
+
+            if (textarea.value == "") {
+                error.innerHTML = "Съобщението не трябва да е празно!"
+                error.style = "display: block;"
+                return false;
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
